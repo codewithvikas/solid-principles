@@ -20,6 +20,8 @@ class ShipmentTest {
     @Test
     fun `verify standard shipping cost`() {
         val totalCost = shipmentService.calculateTotalCost()
+        shipmentService.displayAllShipments()
+
         assertEquals(360.0, totalCost, 0.0)
     }
 

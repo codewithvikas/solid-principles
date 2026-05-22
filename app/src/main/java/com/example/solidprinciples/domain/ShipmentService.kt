@@ -1,7 +1,7 @@
 package com.example.solidprinciples.domain
 
-import android.util.Log
 const val TAG = "ShipmentService"
+
 class ShipmentService {
 
     val shipments: MutableList<StandardShipping> = mutableListOf()
@@ -12,7 +12,7 @@ class ShipmentService {
 
     fun displayAllShipments() {
         for (shipment in shipments) {
-            Log.i(TAG,shipment.details())
+            println(shipment.details())
         }
     }
 
