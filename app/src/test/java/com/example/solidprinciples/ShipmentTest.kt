@@ -3,6 +3,7 @@ package com.example.solidprinciples
 import com.example.solidprinciples.domain.ExpressShipping
 import com.example.solidprinciples.domain.ShipmentService
 import com.example.solidprinciples.domain.StandardShipping
+import com.example.solidprinciples.domain.StorePickup
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
@@ -36,6 +37,14 @@ class ShipmentTest {
         shipmentService.displayAllShipments()
 
         assertEquals(720.0, totalCost, 0.0)
+    }
+
+    @Test
+    fun `verify store pickup`() {
+        shipmentService.addShipment(StorePickup("Gurugram", 10.0))
+        val totalCost = shipmentService.calculateTotalCost()
+        shipmentService.displayAllShipments()
+        assertEquals(0.0, totalCost, 0.0)
     }
 
     companion object {

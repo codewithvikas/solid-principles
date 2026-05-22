@@ -1,12 +1,13 @@
 package com.example.solidprinciples.domain
 
-class ExpressShipping(private val destination: String, private val weight: Double) :
+class StorePickup(private val destination: String, private val weight: Double) :
     ShippingMethod(destination, weight) {
     override fun calculateCost(): Double {
-        return weight * 30
+        return 0.0
     }
 
     override fun details(): String {
-        return "Store pickup to $destination"
+        return "Store pickup $destination"
     }
+
 }
