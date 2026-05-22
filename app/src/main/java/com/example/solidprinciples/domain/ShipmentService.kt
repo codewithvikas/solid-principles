@@ -4,9 +4,9 @@ const val TAG = "ShipmentService"
 
 class ShipmentService {
 
-    val shipments: MutableList<StandardShipping> = mutableListOf()
+    val shipments: MutableList<ShippingMethod> = mutableListOf()
 
-    fun addShipment(shipment: StandardShipping) {
+    fun addShipment(shipment: ShippingMethod) {
         shipments.add(shipment)
     }
 
