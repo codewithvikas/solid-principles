@@ -5,17 +5,11 @@ import com.example.solidprinciples.domain.ShipmentService
 import com.example.solidprinciples.domain.StandardShipping
 import com.example.solidprinciples.domain.StorePickup
 import org.junit.Assert.assertEquals
-import org.junit.Before
 import org.junit.Test
 
 class ShipmentTest {
 
     val shipmentService = ShipmentService()
-
-    @Before
-    fun initShipmentService() {
-
-    }
 
     @Test
     fun `verify standard shipping cost`() {
