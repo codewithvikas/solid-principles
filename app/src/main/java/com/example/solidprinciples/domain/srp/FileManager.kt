@@ -5,7 +5,11 @@ package com.example.solidprinciples.domain.srp
  * S - Single Responsibility Principle (SRP)
  * Now FileManager follow SRP because this is only what intended.
  */
-class FileManager(val logger: Logger, val notificationService: NotificationService) {
+class FileManager(
+    val logger: Logger,
+    val notificationService: NotificationService,
+    val notification: Notification
+) {
     private val files = mutableListOf<String>()
 
     fun openFile(fileName: String) {
@@ -13,12 +17,12 @@ class FileManager(val logger: Logger, val notificationService: NotificationServi
             println("Opening file $fileName")
             logger.logAction("Opening File $fileName")
             notificationService.sendNotification(
-                type = NotificationType.EMAIL,
+                notification = notification,
                 value = "Opening File $fileName"
             )
         } else {
             notificationService.sendNotification(
-                type = NotificationType.EMAIL,
+                notification = notification,
                 value = "Can not open file $fileName"
             )
         }
@@ -29,7 +33,7 @@ class FileManager(val logger: Logger, val notificationService: NotificationServi
         files.add(fileName)
         logger.logAction("Save $fileName")
         notificationService.sendNotification(
-            type = NotificationType.EMAIL,
+            notification = notification,
             value = "Saved File $fileName"
         )
     }
