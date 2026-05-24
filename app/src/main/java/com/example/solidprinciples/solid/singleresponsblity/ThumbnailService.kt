@@ -12,7 +12,7 @@ class ThumbnailService(
 
     fun generateThumbnail(fileName: String) {
         println("Generating thumbnail $fileName")
-        logger.logAction("Time Take for Thumbnail: ${Random.Default.nextInt(1, 10)} second for $fileName")
+        logger.logAction("Time Take for Thumbnail: ${Random.nextInt(1, 10)} second for $fileName")
         notificationService.sendNotification(
             notification = notification,
             value = "Generated Thumbnail for $fileName"

@@ -1,7 +1,5 @@
 package com.example.solidprinciples.solid.openclose
 
-import com.example.solidprinciples.solid.openclose.Notification
-
 /**
  * SOLID.
  * O- Open-Close principles

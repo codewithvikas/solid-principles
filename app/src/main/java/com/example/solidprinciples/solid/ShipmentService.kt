@@ -1,7 +1,5 @@
 package com.example.solidprinciples.solid
 
-const val TAG = "ShipmentService"
-
 class ShipmentService {
 
     val shipments: MutableList<ShippingMethod> = mutableListOf()
