@@ -12,9 +12,15 @@ class FileManager(val logger: Logger, val notificationService: NotificationServi
         if (files.contains(fileName)) {
             println("Opening file $fileName")
             logger.logAction("Opening File $fileName")
-            notificationService.sendNotification("Opening File $fileName")
+            notificationService.sendNotification(
+                type = NotificationType.EMAIL,
+                value = "Opening File $fileName"
+            )
         } else {
-            notificationService.sendNotification("Can not open file $fileName")
+            notificationService.sendNotification(
+                type = NotificationType.EMAIL,
+                value = "Can not open file $fileName"
+            )
         }
     }
 
@@ -22,6 +28,9 @@ class FileManager(val logger: Logger, val notificationService: NotificationServi
         println("Saving file $fileName")
         files.add(fileName)
         logger.logAction("Save $fileName")
-        notificationService.sendNotification("Saved File $fileName")
+        notificationService.sendNotification(
+            type = NotificationType.EMAIL,
+            value = "Saved File $fileName"
+        )
     }
 }
