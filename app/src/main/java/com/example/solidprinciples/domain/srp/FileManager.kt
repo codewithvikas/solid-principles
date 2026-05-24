@@ -8,7 +8,7 @@ package com.example.solidprinciples.domain.srp
 class FileManager(val logger: Logger, val notificationService: NotificationService) {
     private val files = mutableListOf<String>()
 
-    public fun openFile(fileName: String) {
+    fun openFile(fileName: String) {
         if (files.contains(fileName)) {
             println("Opening file $fileName")
             logger.logAction("Opening File $fileName")
@@ -18,7 +18,7 @@ class FileManager(val logger: Logger, val notificationService: NotificationServi
         }
     }
 
-    public fun saveFile(fileName: String) {
+    fun saveFile(fileName: String) {
         println("Saving file $fileName")
         files.add(fileName)
         logger.logAction("Save $fileName")
