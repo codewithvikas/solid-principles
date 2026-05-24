@@ -1,4 +1,4 @@
-package com.example.solidprinciples.domain
+package com.example.solidprinciples.solid
 
 class StorePickup(private val destination: String, private val weight: Double) :
     ShippingMethod(destination, weight) {

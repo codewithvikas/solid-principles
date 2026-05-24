@@ -1,4 +1,6 @@
-package com.example.solidprinciples.domain.srp
+package com.example.solidprinciples.solid.openclose
+
+import com.example.solidprinciples.solid.openclose.Notification
 
 /**
  * SOLID.

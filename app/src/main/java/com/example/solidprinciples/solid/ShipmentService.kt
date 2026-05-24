@@ -1,4 +1,4 @@
-package com.example.solidprinciples.domain
+package com.example.solidprinciples.solid
 
 const val TAG = "ShipmentService"
 

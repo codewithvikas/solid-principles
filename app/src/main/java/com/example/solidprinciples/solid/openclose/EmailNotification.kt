@@ -1,4 +1,4 @@
-package com.example.solidprinciples.domain.srp
+package com.example.solidprinciples.solid.openclose
 
 class EmailNotification : Notification {
     override fun notify(value: String) {

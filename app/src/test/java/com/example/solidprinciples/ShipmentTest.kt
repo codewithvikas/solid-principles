@@ -1,9 +1,9 @@
 package com.example.solidprinciples
 
-import com.example.solidprinciples.domain.ExpressShipping
-import com.example.solidprinciples.domain.ShipmentService
-import com.example.solidprinciples.domain.StandardShipping
-import com.example.solidprinciples.domain.StorePickup
+import com.example.solidprinciples.solid.ExpressShipping
+import com.example.solidprinciples.solid.ShipmentService
+import com.example.solidprinciples.solid.StandardShipping
+import com.example.solidprinciples.solid.StorePickup
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

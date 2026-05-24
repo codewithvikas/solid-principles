@@ -1,4 +1,4 @@
-package com.example.solidprinciples.domain.srp
+package com.example.solidprinciples.solid.singleresponsblity
 
 class Logger {
     fun logAction(value: String) {

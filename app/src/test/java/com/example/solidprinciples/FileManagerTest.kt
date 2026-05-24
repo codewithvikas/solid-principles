@@ -1,11 +1,11 @@
 package com.example.solidprinciples
 
-import com.example.solidprinciples.domain.srp.EmailNotification
-import com.example.solidprinciples.domain.srp.FileManager
-import com.example.solidprinciples.domain.srp.Logger
-import com.example.solidprinciples.domain.srp.NotificationService
-import com.example.solidprinciples.domain.srp.SmsNotification
-import com.example.solidprinciples.domain.srp.ThumbnailService
+import com.example.solidprinciples.solid.openclose.EmailNotification
+import com.example.solidprinciples.solid.singleresponsblity.FileManager
+import com.example.solidprinciples.solid.singleresponsblity.Logger
+import com.example.solidprinciples.solid.openclose.NotificationService
+import com.example.solidprinciples.solid.openclose.SmsNotification
+import com.example.solidprinciples.solid.singleresponsblity.ThumbnailService
 import io.mockk.mockk
 import io.mockk.verify
 import org.junit.Test
