@@ -7,6 +7,9 @@ class ThumbnailService(val logger: Logger, val notificationService: Notification
     fun generateThumbnail(fileName: String) {
         println("Generating thumbnail $fileName")
         logger.logAction("Time Take for Thumbnail: ${Random.nextInt(1, 10)} second for $fileName")
-        notificationService.sendNotification("Generated Thumbnail for $fileName")
+        notificationService.sendNotification(
+            type = NotificationType.WHATSAPP,
+            value = "Generated Thumbnail for $fileName"
+        )
     }
 }
