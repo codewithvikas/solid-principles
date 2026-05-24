@@ -3,29 +3,28 @@ package com.example.solidprinciples.solid.liskovsubstitution
 /**
  * SOLID
  * L- Liskov substitution principle
- * This Implementation violates Liskov substitution principle
+ * This Implementation Liskov substitution principle.
+ *Solved problem by separate what differ. Here withdraw were behaving differently so separated out withdraw behavior.
  */
+
+interface Withdrawable {
+    fun withdraw(amount: Double)
+}
+
 open class BankAccount(open val amount: Double) {
 
     fun balance() {
         println("Current Balance: Rs $amount")
     }
-
-    open fun withdraw() {
-        println("Withdraw: Rs $amount")
-    }
 }
 
-class SavingsAccount(override val amount: Double) : BankAccount(amount) {
+class SavingsAccount(override val amount: Double) : BankAccount(amount), Withdrawable {
 
-    override fun withdraw() {
+    override fun withdraw(amount: Double) {
         println("Saving account withdrawn : Rs $amount")
     }
 }
 
 class FixedDepositAccount(override val amount: Double) : BankAccount(amount) {
 
-    override fun withdraw() {
-        throw UnsupportedOperationException("Fixed deposit accounts can not withdraw.")
-    }
 }
