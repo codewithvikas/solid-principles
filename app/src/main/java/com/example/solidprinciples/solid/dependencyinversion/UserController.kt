@@ -1,14 +1,18 @@
 package com.example.solidprinciples.solid.dependencyinversion
 
-class UserController {
-    val sqlDatabase = SqlDatabase()
+class UserController(val database: Database) {
     fun saveUser(user: String) {
-        sqlDatabase.saveUSer(user)
+        database.saveUser(user)
     }
 }
 
-class SqlDatabase {
-    fun saveUSer(user: String) {
+interface Database {
+    fun saveUser(user: String)
+}
+
+class SqlDatabase : Database {
+    override fun saveUser(user: String) {
         println("User - $user saved in SQL database")
     }
+
 }
